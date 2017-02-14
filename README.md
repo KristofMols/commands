@@ -3,7 +3,7 @@ Various commands to get you out of trouble at random times
 
 ## Git
 
-> git for-each-ref --format '%(refname:short)' refs/heads/ | grep -v \development | xargs git branch -d
+    git for-each-ref --format '%(refname:short)' refs/heads/ | grep -v \development | xargs git branch -d
 
 - `git` : base git command
     - `for-each-ref` : Iterate over all refs
