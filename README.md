@@ -16,3 +16,11 @@ Deletes all local branches that are fully merged in to their remote branch
 - `xargs` : reads output from previous commands and executes the following command
     - `git` : base git command
         - `branch -d` : deletes the supplied branch
+
+## Terminal
+
+Finds all files in the current folder that have a file size larger than 100 Mb
+
+    find . -type f -size +100000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
+
+- `find` : 
