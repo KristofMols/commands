@@ -23,4 +23,11 @@ Finds all files in the current folder that have a file size larger than 100 Mb
 
     find . -type f -size +100000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 
-- `find` : 
+- `find .` : find in current folder
+    - `-type f` : files
+    - `-size +100000k` : where the file size is larger than 100Mb
+    - `-exec` : executes the command
+        - ` ls -lh` : list files with long format and with human readable file sizes
+        - `{}` : matching the filename being processed by `find`
+        - `\;` : end of the statement to be executed
+    - `awk '{ print $9 ": " $5 }'` : uses awk to print the results of the find command as : 'filname: filesize'
