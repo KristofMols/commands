@@ -45,3 +45,14 @@ Delete all containers
         - `ps` : list containers
             - `-a` : all containers
             - `-q` : display only numeric ID's
+
+Delete all images
+
+    docker rmi $(docker images -q)
+
+- `docker` : base docker command
+    - `rmi` : remove image
+    - `$(..)` : execute command
+        - `docker` : base docker command
+        - `images` : list images
+            - `-q` : display only numeric ID's
