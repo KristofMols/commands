@@ -56,3 +56,13 @@ Delete all images
         - `docker` : base docker command
         - `images` : list images
             - `-q` : display only numeric ID's
+
+Create new image from a `Dockerfile`
+
+    docker build --rm -t <name>:<tag> .
+
+- `docker` : base docker command
+    - `build` : build an image from a Dockerfile
+        - `--rm` : Remove intermediate containers after a successful build
+        - `-t` : Name and optionally a tag in the 'name:tag' format
+        - `.` : look for the Dockerfile in the current directory
