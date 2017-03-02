@@ -23,7 +23,6 @@ Finds all files in the current folder that have a file size larger than 100 Mb
 
     find . -type f -size +100000k -exec ls -lh {} \; | awk '{ print $9 ": " $5 }'
 
-<<<<<<< HEAD
 - `find .` : find in current folder
     - `-type f` : files
     - `-size +100000k` : where the file size is larger than 100Mb
@@ -57,6 +56,3 @@ Delete all images
         - `docker` : base docker command
         - `images` : list images
             - `-q` : display only numeric ID's
-=======
-- `find` : 
->>>>>>> parent of 763c295... add description
