@@ -31,3 +31,17 @@ Finds all files in the current folder that have a file size larger than 100 Mb
         - `{}` : matching the filename being processed by `find`
         - `\;` : end of the statement to be executed
     - `awk '{ print $9 ": " $5 }'` : uses awk to print the results of the find command as : 'filname: filesize'
+
+## Docker
+
+Delete all containers
+
+    docker rm $(docker ps -a -q)
+
+- `docker` : base docker command
+    - `rm` : remove container
+    - `$(..)` : execute command
+        - `docker` : base docker command
+        - `ps` : list containers
+            - `-a` : all containers
+            - `-q` : display only numeric ID's
